@@ -6,26 +6,31 @@ import random
 
 auto_setup(__file__)
 
-i = 1
+# duration
+yeyuanhuo_duration = 105
 
-yeyuanhuo_duration = 90 + 15
-
+i = 0
 while(1):
-    wait(Template(r"./img/challenge.png",
-                  record_pos=(1.226, 0.153), resolution=(1904, 1009)))
+    wait(Template(r"./img/challenge.png"))
     print("Start for " + str(i) + " times...")
-    sleep(1)
-    touch(Template(r"./img/challenge.png",
-                   record_pos=(1.226, 0.153), resolution=(1904, 1009)))
+    while(1):
+        if exists(Template(r"./img/qingming.png")):
+            break
+        click(Template(r"./img/challenge.png"))
+        sleep(2)
+        # check if in process
+        if exists(Template(r"./img/qingming.png")):
+            break
+    # start
+    # wait for finish
     sleep(yeyuanhuo_duration + random.randint(0, 5))
-    wait(Template(r"./img/red_egg.png",
-                  record_pos=(1.141, 0.174), resolution=(1904, 1009)))
+    wait(Template(r"./img/red_egg.png"))
     sleep(2 + random.randint(0, 5))
     while(1):
-        touch(Template(r"./img/red_egg.png",
-                       record_pos=(1.141, 0.174), resolution=(1904, 1009)))
+        click(Template(r"./img/red_egg.png"))
         sleep(2 + random.randint(0, 5))
-        if not exists(Template("./img/red_egg.png", record_pos=(1.141, 0.174), resolution=(1904, 1009))):
+        # check if clicked
+        if not exists(Template("./img/red_egg.png")):
             break
     print("Finish.")
     i += 1
