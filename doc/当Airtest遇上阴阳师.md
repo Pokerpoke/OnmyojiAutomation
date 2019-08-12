@@ -27,21 +27,21 @@
 
 ## 开工
 
-### 1. 护肝第一步，打开阴阳师。emmm，和**管理员权限打开**Airtest。
+### 1. 护肝第一步，打开阴阳师。emmm，和**管理员权限打开**Airtest
 
-![Airtest主界面](img/Airtest主界面.png)
+![Airtest主界面](https://raw.githubusercontent.com/Pokerpoke/OnmyojiAutomation/master/doc/img/Airtest主界面.png)
 
 选项->设置，勾选最上面三个选项。
 
-![设置](img/设置.png)
+![设置](https://raw.githubusercontent.com/Pokerpoke/OnmyojiAutomation/master/doc/img/设置.png)
 
 ### 2. 将Airtest连接阴阳师
 
 点击设备窗->搜索窗口->阴阳师-网易游戏
 
-![设备窗](img/设备窗.png)
+![设备窗](https://raw.githubusercontent.com/Pokerpoke/OnmyojiAutomation/master/doc/img/设备窗.png)
 
-![搜索窗口](img/搜索窗口.png)
+![搜索窗口](https://raw.githubusercontent.com/Pokerpoke/OnmyojiAutomation/master/doc/img/搜索窗口.png)
 
 ### 3. 写代码
 
@@ -49,11 +49,11 @@
 
 点击wait，进入截图模式，截取阴阳师界面中的挑战按钮，截取范围可以稍大，提高识别率。
 
-![wait](img/wait.png)
+![wait](https://raw.githubusercontent.com/Pokerpoke/OnmyojiAutomation/master/doc/img/wait.png)
 
 窗口中自动产生了，一行代码，我们选中该行代码，复制，将`wait`改为`click`或者`touch`，大概如下，此时按下F5或者点击上方的运行按钮（一个小三角），就可以看到鼠标自己跑过去点击挑战按钮了。
 
-![code](img/code.png)
+![code](https://raw.githubusercontent.com/Pokerpoke/OnmyojiAutomation/master/doc/img/code.png)
 
 我们按照一开始的点击挑战->打架->等待结束即可，自己添加一些边界条件跟随机参数。
 
