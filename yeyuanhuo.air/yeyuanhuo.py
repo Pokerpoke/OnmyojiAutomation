@@ -14,14 +14,12 @@ while (1):
     # 等待挑战按钮
     wait(Template(r"./img/challenge.png"))
     print("Start for " + str(i) + " times...")
-    while (1):
-        # 判断是否开始打架
-        if exists(Template(r"./img/qingming.png")):
-            break
-        click(Template(r"./img/challenge.png"))
-        sleep(2)
-        # 正在打架
-        if exists(Template(r"./img/qingming.png")):
+    while(1):
+        try:
+            click(Template(r"./img/challenge.png"))
+        except TargetNotFoundError:
+            pass
+        else:
             break
     # 打架
     sleep(yeyuanhuo_duration + random.randint(0, 5))
@@ -29,8 +27,13 @@ while (1):
     wait(Template(r"./img/red_egg.png"))
     sleep(2 + random.randint(0, 5))
     while(1):
-        click(Template(r"./img/red_egg.png"))
-        sleep(2 + random.randint(0, 5))
+        try:
+            click(Template(r"./img/red_egg.png"))
+            sleep(2 + random.randint(0, 5))
+        except TargetNotFoundError:
+            pass
+        else:
+            break
         # 判断点击成功没有
         if not exists(Template("./img/red_egg.png")):
             break
